@@ -13,9 +13,10 @@ def diceResult():
     diceOutput = str(random.randint(min, max))
     print(' Dice Value ', diceOutput)
     button['text'] = 'Dice Rolled ' + diceOutput
+
+    # Modify path to absolute when running locally
     imageFile = f"Dice{diceOutput}.png"
     
-    # Resize the image to fit the window size
     img = Image.open(imageFile)
     img = img.resize((240, 240), Image.LANCZOS)
     window.photo1 = ImageTk.PhotoImage(img)
